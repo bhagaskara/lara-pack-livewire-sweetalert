@@ -1,0 +1,26 @@
+{
+    "name": "lara-pack/livewire-sweetalert",
+    "description": "Livewire Sweetalert",
+    "require": {
+        "livewire/livewire": "^3.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LaraPack\\LivewireSweetalert\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bhagaskara",
+            "email": "bhagaskaraliancer@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraPack\\LivewireSweetalert\\LivewireSweetalertServiceProvider"
+            ]
+        }
+    }
+}
