@@ -11,8 +11,8 @@ class LivewireSweetalertServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        Livewire::provideAssets([
-            'js' => __DIR__ . '/../resources/js/livewire-events.js',
+        Livewire::provideJs([
+            'script' => __DIR__ . '/../resources/js/livewire-events.js',
         ]);
     }
 }
