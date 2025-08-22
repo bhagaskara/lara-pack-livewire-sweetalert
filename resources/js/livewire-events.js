@@ -1,4 +1,4 @@
-document.addEventListener('livewire:load', function () {
+document.addEventListener("livewire:init", () => {
     Livewire.on("SwalInfo", (event) => {
         Swal.fire({
             icon: event[0],
@@ -25,4 +25,4 @@ document.addEventListener('livewire:load', function () {
             }
         });
     });
-});
+})

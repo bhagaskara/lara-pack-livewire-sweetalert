@@ -3,7 +3,7 @@
 namespace LaraPack\LivewireSweetalert;
 
 use Illuminate\Support\ServiceProvider;
-use Livewire\Livewire;
+use LaraPack\LivewireSweetalert\Http\Middleware\InjectScript;
 
 class LivewireSweetalertServiceProvider extends ServiceProvider
 {
@@ -11,8 +11,6 @@ class LivewireSweetalertServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        Livewire::provideJs([
-            'script' => __DIR__ . '/../resources/js/livewire-events.js',
-        ]);
+        $this->app['router']->pushMiddlewareToGroup('web', InjectScript::class);
     }
 }
