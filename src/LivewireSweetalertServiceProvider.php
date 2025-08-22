@@ -7,10 +7,10 @@ use LaraPack\LivewireSweetalert\Http\Middleware\InjectScript;
 
 class LivewireSweetalertServiceProvider extends ServiceProvider
 {
-    public function register() {}
-
-    public function boot()
+    public function register()
     {
-        $this->app['router']->pushMiddlewareToGroup('web', InjectScript::class);
+        $this->app->booted(function () {
+            $this->app['router']->pushMiddlewareToGroup('web', InjectScript::class);
+        });
     }
 }

@@ -16,7 +16,7 @@ class InjectScript
         ) {
             $content = $response->getContent();
 
-            $script = file_get_contents(__DIR__ . '/../resources/js/livewire-events.js');
+            $script = file_get_contents(__DIR__ . '/../../../resources/js/livewire-events.js');
             $scriptTag = '<script>' . $script . '</script>';
 
             // Inject sebelum tag </body>
